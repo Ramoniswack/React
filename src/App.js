@@ -1,3 +1,4 @@
+import { use, useEffect, useState } from 'react';
 import './App.css';
 
 
@@ -5,6 +6,15 @@ import './App.css';
 
 const Card= ({title}) =>
   {
+    const [HasLiked, setHasLiked] = useState(false);
+
+
+    useEffect( () =>
+    {
+      console.log(`${title} has been Liked: ${HasLiked}`);
+    }
+    );
+
     return (
 // className="Card"
       // inline > External
@@ -12,6 +22,7 @@ const Card= ({title}) =>
       <div className='Card'>
 
       <h2> {title} </h2>
+      <button onClick={ ()=> {setHasLiked(!HasLiked)}}>  {HasLiked ? '💓': '🤍'} </button>
 
       </div>
     );
@@ -19,6 +30,12 @@ const Card= ({title}) =>
   } 
 
 const  App = () =>  {
+
+  
+  // const [variable_name, set_same_Variable_name] = useState(false);
+  // if the variable was number, we pass value inside useState
+  // const [num, setNum] = useState(5); 
+
 
   const name = 'R.a.mon';
 
