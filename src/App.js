@@ -31,7 +31,7 @@ const Card= ({title}) =>
 
 const  App = () =>  {
 
-  
+  // const
   // const [variable_name, set_same_Variable_name] = useState(false);
   // if the variable was number, we pass value inside useState
   // const [num, setNum] = useState(5); 
